@@ -33,4 +33,13 @@ export class BandBusiness {
             })!
         )
     }
+
+    async getBandDetails(input: string): Promise<Band> {
+
+        if (!input) {
+            throw new InvalidInputError("Invalid input to get band details")
+        }
+
+        return this.bandDatabase.getBandDetails(input)
+    }
 }

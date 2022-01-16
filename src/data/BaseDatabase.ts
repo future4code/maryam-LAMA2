@@ -6,6 +6,12 @@ export abstract class BaseDatabase {
 
     private static connection: Knex | null = null;
 
+    protected tableNames = {
+        bands: "LAMA_TABELA_BANDAS",
+        shows: "LAMA_TABELA_SHOWS",
+        users: "LAMA_TABELAS_USUÁRIOS"
+    }
+
     protected getConnection(): Knex {
         if (!BaseDatabase.connection) {
             BaseDatabase.connection = knex({
