@@ -1,4 +1,7 @@
+import { config } from "dotenv";
 import * as jwt from "jsonwebtoken";
+
+config()
 
 export class Authenticator {
   public generateToken(input: AuthenticationData,
