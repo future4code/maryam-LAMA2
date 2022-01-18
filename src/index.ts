@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-
+// Router
 app.use("/user", userRouter);
 app.use("/band", bandRouter);
 app.use("/show", showRouter);
